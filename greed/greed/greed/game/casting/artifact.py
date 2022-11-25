@@ -14,11 +14,31 @@ class Artifact(Actor):
         Actor (Actor): The Actor class
         _message (String): The message to display
     """
+    FRAME_RATE = 12
+    MAX_X = 900
+    MAX_Y = 600
+    CELL_SIZE = 15
+    FONT_SIZE = 15
+    COLS = 60
+    ROWS = 40
+    CAPTION = "Greed"
+    WHITE = Color(255, 255, 255)
+    DEFAULT_ARTIFACTS = 40
     
     def __init__(self):
         """Constructs a new Artifact
         """
         super().__init__()
+        self.FRAME_RATE = 12
+        self.MAX_X = 900
+        self.MAX_Y = 600
+        self.CELL_SIZE = 15
+        self.FONT_SIZE = 15
+        self.COLS = 60
+        self.ROWS = 40
+        self.CAPTION = "Greed"
+        self.WHITE = Color(255, 255, 255)
+        self.DEFAULT_ARTIFACTS = 40
         
     def get_point_value(self):
         """Gets the point value depending on the object picked up
@@ -46,16 +66,3 @@ class Artifact(Actor):
         
         self._position = Point(self._position.get_x(), y)
         
-    def refresh(self):
-        """Resets the artifact after the Actor makes it diasppear.
-        """
-        x = random.randint(1, 59)
-        position = Point(x, 0)
-        position = position.scale(15)
-        self.set_position(position)
-        
-        r = random.randint(0, 255)
-        g = random.randint(0, 255)
-        b = random.randint(0, 255)
-        self.set_color(Color(r, g, b))
-            

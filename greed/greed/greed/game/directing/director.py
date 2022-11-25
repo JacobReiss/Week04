@@ -62,7 +62,6 @@ class Director:
             
             if robot.get_position().equals(artifact.get_position()):
                 self._total_score += artifact.get_point_value()
-                artifact.refresh()
         
     def _do_outputs(self, cast):
         """Draws the actors on the screen.
