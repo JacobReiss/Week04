@@ -38,7 +38,7 @@ class Artifact(Actor):
     def move_down(self):
         """Moves the screen down to simulate the objects falling.
         """
-        y = self._position.get_y() + 5
+        y = self._position.get_y() + 10
         
         if y == 600:
             y = 0
